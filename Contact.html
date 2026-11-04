@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contact — Sinope</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+html,body{margin:0;padding:0;background:#151518}
+*,*::before,*::after{box-sizing:border-box}
+body{font-family:'Manrope',system-ui,sans-serif;-webkit-font-smoothing:antialiased;color:#fff;background-image:radial-gradient(circle at 50% 0%,rgba(254,93,65,0.08),transparent 55%),linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px);background-size:auto,42px 42px,42px 42px}
+::selection{background:rgba(254,93,65,0.35)}
+.glitch-link{position:relative;text-decoration:none;display:inline-block;transition:color .15s ease}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;background:rgba(17,17,17,0.7);backdrop-filter:blur(16px) saturate(160%);-webkit-backdrop-filter:blur(16px) saturate(160%);border-bottom:1px solid rgba(255,255,255,0.07);height:56px;padding:0 24px;justify-content:space-between}
+nav .links{display:flex;gap:28px;align-items:center}
+nav a{font-size:13px;color:rgba(255,255,255,0.55);font-weight:500;text-decoration:none;transition:color .15s;font-family:'JetBrains Mono',monospace;letter-spacing:0.02em}
+nav a:hover,nav a.active{color:#fe5d41}
+nav .brand{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:14px;color:#fff;text-decoration:none;letter-spacing:-0.02em}
+main{padding:120px 24px 80px;display:flex;justify-content:center}
+.term{width:100%;max-width:720px;background:rgba(16,16,16,0.75);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.09);border-radius:16px;overflow:hidden;box-shadow:0 50px 120px -30px rgba(0,0,0,0.8),0 0 0 1px rgba(254,93,65,0.05),0 0 60px -20px rgba(254,93,65,0.15)}
+.termbar{height:40px;display:flex;align-items:center;padding:0 16px;gap:8px;background:rgba(255,255,255,0.025);border-bottom:1px solid rgba(255,255,255,0.07)}
+.dot{width:8px;height:8px;border-radius:50%;background:rgba(254,93,65,0.5)}
+.dot:nth-child(3){background:#fe5d41;box-shadow:0 0 8px rgba(254,93,65,0.9)}
+.termtitle{margin-left:10px;font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:0.03em;color:rgba(255,255,255,0.3)}
+.termbody{padding:32px 32px 36px;font-family:'JetBrains Mono',monospace;font-size:14.5px;line-height:1.9;min-height:420px}
+.line{white-space:pre-wrap;word-break:break-word}
+.prompt{color:#fe5d41;text-shadow:0 0 8px rgba(254,93,65,0.6)}
+.sys{color:rgba(255,255,255,0.35)}
+.answer{color:#fff}
+.qline{color:rgba(255,255,255,0.85);margin-top:16px;font-weight:500}
+.input-row{display:flex;align-items:flex-start;gap:10px;margin-top:12px;padding-bottom:6px;border-bottom:1px solid rgba(255,255,255,0.08);transition:border-color .2s ease}
+.input-row:focus-within{border-color:rgba(254,93,65,0.5)}
+.input-row .prompt{flex-shrink:0}
+.field{background:transparent;border:none;outline:none;color:#fff;font-family:'JetBrains Mono',monospace;font-size:14.5px;flex:1;caret-color:#fe5d41;resize:none;line-height:1.9}
+.cursor{display:inline-block;width:8px;height:16px;background:#fe5d41;margin-left:2px;vertical-align:middle;animation:blink 1s steps(1) infinite;box-shadow:0 0 8px rgba(254,93,65,0.8)}
+@keyframes blink{50%{opacity:0}}
+.hint{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:0.03em;color:rgba(255,255,255,0.22);margin-top:10px}
+.done{margin-top:22px;padding-top:20px;border-top:1px solid rgba(139,209,143,0.15);color:#8bd18f;text-shadow:0 0 10px rgba(139,209,143,0.3)}
+footer{padding:32px 56px;text-align:center;font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(255,255,255,0.3)}
+a{color:#fe5d41}
+a:hover{color:#ff8a68}
+</style>
+<template id="__bundler_thumbnail" data-bg-color="#1a1a1a">
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg"><rect width="1200" height="800" fill="#1a1a1a"/><text x="600" y="420" font-family="monospace" font-size="60" fill="#fe5d41" text-anchor="middle">CONTACT</text></svg>
+</template>
+</head>
+<body>
+<nav>
+  <a class="brand" href="Sinope homepage (black logo).html">sinope</a>
+  <div class="links">
+    <a class="glitch-link" href="Sinope homepage (black logo).html">About</a>
+    <a class="glitch-link" href="Sinope homepage (black logo).html">Support</a>
+    <a class="glitch-link active" href="Contact.html">Contact</a>
+  </div>
+</nav>
+<main>
+  <div class="term">
+    <div class="termbar">
+      <span class="dot" style="background:#FF5F57"></span>
+      <span class="dot" style="background:#FEBC2E"></span>
+      <span class="dot" style="background:#28C840"></span>
+      <span class="termtitle">Contact Us</span>
+    </div>
+    <div class="termbody" id="termbody"></div>
+  </div>
+</main>
+<footer>© 2026 · Sinope · <a href="Sinope homepage (black logo).html">home</a></footer>
+<script>
+const steps = [
+  {key:'name', q:"what should we call you?", type:'text', placeholder:'your name'},
+  {key:'email', q:"where can we reach you?", type:'text', placeholder:'you@domain.com'},
+  {key:'reason', q:"pick one: bug / idea / partnership / other", type:'text', placeholder:'bug'},
+  {key:'message', q:"go ahead, we're listening.", type:'textarea', placeholder:'type your message, shift+enter for a new line'}
+];
+const answers = {};
+const body = document.getElementById('termbody');
+let stepIndex = 0;
+
+function typeLine(el, text, speed, cb) {
+  let i = 0;
+  const iv = setInterval(() => {
+    el.textContent = text.slice(0, i+1);
+    i++;
+    if (i >= text.length) { clearInterval(iv); if (cb) cb(); }
+  }, speed);
+}
+
+function printSys(text, cb) {
+  const line = document.createElement('div');
+  line.className = 'line sys';
+  body.appendChild(line);
+  typeLine(line, text, 12, cb);
+}
+
+function boot() {
+  printSys('$ sinope --contact', () => {
+    printSys('booting form... connected.', () => {
+      askStep();
+    });
+  });
+}
+
+function askStep() {
+  if (stepIndex >= steps.length) { finish(); return; }
+  const s = steps[stepIndex];
+  const q = document.createElement('div');
+  q.className = 'line qline';
+  body.appendChild(q);
+  typeLine(q, '// ' + s.q, 14, () => showInput(s));
+}
+
+function showInput(s) {
+  const row = document.createElement('div');
+  row.className = 'input-row';
+  const prompt = document.createElement('span');
+  prompt.className = 'prompt';
+  prompt.textContent = '>';
+  row.appendChild(prompt);
+
+  let field;
+  if (s.type === 'textarea') {
+    field = document.createElement('textarea');
+    field.rows = 3;
+  } else {
+    field = document.createElement('input');
+    field.type = 'text';
+  }
+  field.className = 'field';
+  field.placeholder = s.placeholder;
+  field.autocomplete = 'off';
+  row.appendChild(field);
+  body.appendChild(row);
+
+  const hint = document.createElement('div');
+  hint.className = 'hint';
+  hint.textContent = s.type === 'textarea' ? 'press enter to send, shift+enter for newline' : 'press enter to continue';
+  body.appendChild(hint);
+
+  field.focus();
+  window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});
+
+  field.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && !(s.type === 'textarea' && e.shiftKey)) {
+      e.preventDefault();
+      const val = field.value.trim();
+      if (!val) return;
+      answers[s.key] = val;
+      field.disabled = true;
+      hint.remove();
+      row.classList.add('answer');
+      const echo = document.createElement('div');
+      echo.className = 'line answer';
+      echo.style.marginLeft = '18px';
+      echo.textContent = val;
+      row.replaceWith(echo);
+      stepIndex++;
+      askStep();
+    }
+  });
+}
+
+function finish() {
+  const done = document.createElement('div');
+  done.className = 'done';
+  body.appendChild(done);
+  typeLine(done, '✓ transmission received — we\'ll reply to ' + (answers.email || 'you') + ' shortly.', 12, () => {
+    const restart = document.createElement('div');
+    restart.className = 'hint';
+    restart.style.marginTop = '14px';
+    restart.innerHTML = '<a href="Sinope homepage (black logo).html" style="color:#fe5d41">← back to sinope</a>';
+    body.appendChild(restart);
+  });
+}
+
+boot();
+</script>
+</body>
+</html>
