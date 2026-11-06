@@ -104,7 +104,7 @@ footer{border-top:1px solid var(--line);margin-top:60px;padding:50px 0 40px}
 <p>We'll get back to you at the email address you provided as soon as possible.</p>
 </div>
 </div>
-<div class="alt-contact">You can also reach us any time at <a href="mailto:support@swiftsearch.online">support@swiftsearch.online</a></div>
+<div class="alt-contact">You can also reach us any time at <a href="mailto:support@slickclick.app">support@slickclick.app</a></div>
 </div>
 </main>
 <footer>
@@ -125,10 +125,13 @@ footer{border-top:1px solid var(--line);margin-top:60px;padding:50px 0 40px}
 </div>
 </footer>
 <script>
-document.getElementById('supportForm').addEventListener('submit', function(e){
-  e.preventDefault();
-  this.style.display = 'none';
-  document.getElementById('confirmMsg').classList.add('show');
+var FORM_ENDPOINT='https://api.web3forms.com/submit',ACCESS_KEY='84b7dca6-beac-4ebe-bc90-51be3827eb87';
+var TO='support@slickclick.app';
+document.getElementById('supportForm').addEventListener('submit',function(e){
+e.preventDefault();var f=this,d=Object.fromEntries(new FormData(f)),b=f.querySelector('.submit-btn'),done=function(){f.style.display='none';document.getElementById('confirmMsg').classList.add('show')};
+if(!ACCESS_KEY){var body='Name: '+d.name+'\nEmail: '+d.email+'\nBrowser/OS: '+(d.env||'')+'\n\n'+d.message;location.href='mailto:'+TO+'?subject='+encodeURIComponent('[Support] '+d.topic)+'&body='+encodeURIComponent(body);done();return}
+b.disabled=true;b.textContent='Sending...';
+fetch(FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(Object.assign({access_key:ACCESS_KEY,subject:'[Support] '+d.topic,from_name:d.name,replyto:d.email},d))}).then(function(r){return r.json()}).then(function(j){if(!j.success)throw 0;done()}).catch(function(){b.disabled=false;b.textContent='Submit';alert('Sorry, that did not send. Please email '+TO+' directly.')});
 });
 </script>
 </body>
