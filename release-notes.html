@@ -702,6 +702,9 @@
   .rn-tag.changed { background: rgba(245,158,11,0.16); color: #f6b73c; }
   .rn-tag.fixed { background: rgba(244,242,238,0.08); color: var(--ink-2); }
   .rn-release + .rn-release { margin-top: 64px; padding-top: 56px; border-top: 1px solid var(--line); }
+  .rn-release:first-child { padding-top: 56px; border-top: 1px solid var(--line); }
+  .rn-release:first-child > div:first-child { padding-top: 0 !important; }
+  .rn-release:first-child .rn-entry:first-of-type { border-top: 1px solid var(--line); }
   .rn-release + .rn-release .rn-entry:first-of-type { border-top: 1px solid var(--line); }
   .rn-note { color: var(--ink-3); font-size: 14px; font-style: italic; margin: 28px 0 0; padding-top: 24px; border-top: 1px solid var(--line); }
   .rn-entry h3 {
@@ -731,7 +734,7 @@
 <style>.rn-entry ul{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:10px;color:var(--ink-2);line-height:1.6}</style>
 <style>.nav-links{gap:28px}.nav-links a[aria-current="page"]{color:#F4F2EE}</style>
 <style id="nav-fit">@media (max-width:1180px){.nav-links{gap:18px!important}.nav-links a{font-size:13.5px!important}}@media (max-width:1020px){.nav-links{display:none!important}}</style>
-<link rel="icon" href="/favicon.svg" type="image/svg+xml" /><link rel="icon" href="/favicon.ico" sizes="any" /><link rel="apple-touch-icon" href="/apple-touch-icon.png" /><style id="site-match">h1,h2,h3,h4{font-family:"Archivo","Plus Jakarta Sans",sans-serif!important;font-weight:800}h3,h4{font-weight:700}.brand-lockup{display:block;position:relative;height:40px;width:calc(40px * 3032 / 840);background:url(slick-click-lockup-noperiod.svg) left center/contain no-repeat}.brand-lockup::after{content:"";position:absolute;inset:0;background:url(slick-click-period.svg) left center/contain no-repeat}@media(prefers-reduced-motion:no-preference){.brand-lockup::after{animation:dotFlash 2.4s ease-in-out infinite}}@keyframes dotFlash{0%,100%{opacity:1}50%{opacity:.08}}</style><style id="nav-lockup">.nav .brand span{position:relative;background-image:url(slick-click-lockup-noperiod.svg)!important}.nav .brand span::after{content:"";position:absolute;inset:0;background:url(slick-click-period.svg) left center/contain no-repeat}@media(prefers-reduced-motion:no-preference){.nav .brand span::after{animation:dotFlash 2.4s ease-in-out infinite}}@keyframes dotFlash{0%,100%{opacity:1}50%{opacity:.08}}</style></head>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" /><link rel="icon" href="/favicon.ico" sizes="any" /><link rel="apple-touch-icon" href="/apple-touch-icon.png" /><style id="site-match">h1,h2,h3,h4{font-family:"Archivo","Plus Jakarta Sans",sans-serif!important;font-weight:800}h3,h4{font-weight:700}.brand-lockup{display:block;position:relative;height:40px;width:calc(40px * 3032 / 840);background:url(slick-click-lockup-noperiod.svg) left center/contain no-repeat}.brand-lockup::after{content:"";position:absolute;inset:0;background:url(slick-click-period.svg) left center/contain no-repeat}@media(prefers-reduced-motion:no-preference){.brand-lockup::after{animation:dotFlash 2.4s ease-in-out infinite}}@keyframes dotFlash{0%,100%{opacity:1}50%{opacity:.08}}</style><style id="nav-lockup">.nav .brand span{position:relative;background-image:url(slick-click-lockup-noperiod.svg)!important}.nav .brand span::after{content:"";position:absolute;inset:0;background:url(slick-click-period.svg) left center/contain no-repeat}@media(prefers-reduced-motion:no-preference){.nav .brand span::after{animation:dotFlash 2.4s ease-in-out infinite}}@keyframes dotFlash{0%,100%{opacity:1}50%{opacity:.08}}</style><link rel="stylesheet" href="mobile.css" /><script defer src="mobile.js"></script></head>
 <body>
 <div class="bg"></div>
 <div id="root"></div>
@@ -741,6 +744,6 @@
 <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
 <script src="image-slot.js"></script>
 <script type="text/babel" src="swift-parts.jsx?v=20261015b"></script>
-<script type="text/babel" src="release-notes.jsx?v=20261015b"></script>
+<script type="text/babel" src="release-notes.jsx?v=20261105b"></script>
 </body>
 </html>

@@ -214,7 +214,7 @@ function Hero() {
         };
         spin.finished.then(() => {
           cw.remove(); window.__cubeSpun = true; window.dispatchEvent(new Event("cube-spun"));
-          const fx = g.querySelector(".hero-fx"), sc = fx.firstChild, ps = [...sc.children], vids = ps.map((p) => p.querySelector("video"));
+          const fx = g.querySelector(".hero-fx"), sc = fx.firstChild, ps = [...sc.children], vids = ps.map((p) => p.querySelector("video")); vids.forEach((v) => { if (!v) return; v.muted = true; v.defaultMuted = true; v.setAttribute("muted", ""); v.setAttribute("playsinline", ""); v.setAttribute("webkit-playsinline", ""); v.playsInline = true; v.load(); });
           const r0 = mk.getBoundingClientRect(), S = r0.width;
           
           place();
@@ -240,7 +240,7 @@ function Hero() {
           let nudge = null, dir = 1, pend = 0;
           const arm = (res, t) => { nudge = () => { nudge = null; clearTimeout(t); res(); }; };
           const wait = (ms) => new Promise((res) => { const t = setTimeout(() => { nudge = null; res(); }, ms); arm(res, t); });
-          const playVideo = (vid) => new Promise((res) => { vid.currentTime = 0; vid.playbackRate = vid === vids[3] ? 1.15 : 1; vid._done = false; const fin = () => { if (vid._done) return; vid._done = true; vid.pause(); vid.removeEventListener("timeupdate", cut); nudge = null; res(); }; const cut = () => { if (vid === vids[0] && vid.currentTime >= 15.7) fin(); }; vid.addEventListener("timeupdate", cut); vid.onended = fin; arm(() => { vid._done = false; vid.pause(); vid.removeEventListener("timeupdate", cut); res(); }); vid.play().catch(res); });
+          const playVideo = (vid) => new Promise((res) => { vid.currentTime = 0; vid.playbackRate = vid === vids[3] ? 1.15 : 1; vid._done = false; const fin = () => { if (vid._done) return; vid._done = true; vid.pause(); vid.removeEventListener("timeupdate", cut); nudge = null; res(); }; const cut = () => { if (vid === vids[0] && vid.currentTime >= 15.7) fin(); }; vid.addEventListener("timeupdate", cut); vid.onended = fin; arm(() => { vid._done = false; vid.pause(); vid.removeEventListener("timeupdate", cut); res(); }); const go = () => vid.play(); go().catch(() => { const retry = () => { document.removeEventListener("touchstart", retry); document.removeEventListener("click", retry); if (!vid._done) go().catch(res); }; document.addEventListener("touchstart", retry, { once: true }); document.addEventListener("click", retry, { once: true }); }); });
           fx.addEventListener("click", (e) => { const nx = e.target.closest(".cube-next"), bk = e.target.closest(".cube-back"); if (!nx && !bk) return; if (!nudge) { pend = nx ? 1 : -1; return; } if (nx) nudge(); else { dir = -1; nudge(); } });
           (async () => {
             setTimeout(() => { if (dead) return; sc.getAnimations().forEach((an) => an.cancel()); sc.style.transform = TA(0); }, 800 + D + 700);

@@ -57,6 +57,21 @@ function ReleaseHero() {
 
 const RELEASES = [
   {
+    version: '4.3.0', date: 'November 2026',
+    entries: [
+      { tag: 'changed', tagLabel: 'Changed', title: 'Swift Search is now Slick Click', body: (
+        <p>A new name, a new logo and a fresh look. Same one-click searching.</p>) },
+      { tag: 'new', tagLabel: 'New', title: 'Greater keyboard optimization', body: (
+        <p>You can now move around the Slick Click floating menu with the keyboard alone, including the Slick AI menus, the model picker and the multi-search button. Good news for the keyboard lovers out there.</p>) },
+      { tag: 'improved', tagLabel: 'Improved', title: 'Tidier search suggestions', body: (
+        <p>Search suggestions are tidier: five lines at most, arrow keys to move through them, and they step aside when you pause typing so your site icons are never hidden.</p>) },
+      { tag: 'improved', tagLabel: 'Improved', title: 'Smoother multi-search', body: (
+        <p>Multi-search is smoother: tabs open in the order you pick, a bit faster, too.</p>) },
+      { tag: 'new', tagLabel: 'New', title: 'New banner in Settings', body: (
+        <p>A swish new banner at the top of the Settings page now keeps you informed with the latest updates and developments.</p>) },
+    ],
+  },
+  {
     version: '4.2.0', date: 'October 2026',
     entries: [
       { tag: 'new', tagLabel: 'New', title: 'Tell Slick AI how to think', body: (
@@ -194,7 +209,7 @@ function Footer() {
           <div>
             <h6>Resources</h6>
             <ul>
-              <li><a href="tutorials.html">Tutorials</a></li>
+              <li><span style={{ color: 'var(--ink-3)', cursor: 'default' }} aria-disabled="true">Tutorials <em style={{ fontSize: 11, fontStyle: 'normal', letterSpacing: '.06em', textTransform: 'uppercase', marginLeft: 6, padding: '2px 7px', border: '1px solid var(--line)', borderRadius: 999 }}>Coming soon</em></span></li>
               <li><a href="privacy.html">Privacy</a></li>
               <li><a href="terms.html">Terms of service</a></li>
               <li><a href="support.html">Contact</a></li>
@@ -203,10 +218,10 @@ function Footer() {
         </div>
         <div className="foot-bottom">
           <span>© 2026 Slick Click. All rights reserved.</span>
-          <a href="https://sinope.online" className="sinope-credit-plain" title="Sinope, Publisher" aria-label="Developed by Sinope">
+          <span className="sinope-credit-plain" title="Sinope, Publisher" aria-label="Developed by Sinope" style={{ cursor: 'default' }}>
             <span style={{ fontSize: '9px', textTransform: 'uppercase', letterSpacing: '0.1em', opacity: 0.5, fontWeight: 500 }}>Developed by</span>
             <img src="sinope-lockup-gray.png" alt="Sinope" style={{ height: 46, width: 'auto' }} />
-          </a>
+          </span>
           <span>v.4.3.0. Last updated November 2026</span>
         </div>
       </div>
