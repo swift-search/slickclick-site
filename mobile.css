@@ -61,3 +61,12 @@ pre{overflow-x:auto}
 @media (hover:none){
 .feature:hover,#features .feature:hover{transform:none!important}
 }
+
+@media (max-width:860px){.cube-next,.cube-back{padding:8px 14px!important;font-size:12px!important;gap:6px!important;right:auto}.cube-next{right:14px!important;bottom:14px!important}.cube-back{left:14px!important;bottom:14px!important}.cube-next svg{width:12px!important;height:12px!important}}
+
+.bp-pic{display:contents}.bp-num,.bp-pin{display:none}
+@media (max-width:880px){#features .bp-pic{display:block;position:relative;width:100%;order:0}#features .bp-pic .bp-img{display:block;width:100%;height:auto}.bp-pin{display:flex;position:absolute;width:24px;height:24px;margin:-12px 0 0 -12px;border-radius:50%;background:#839CFF;color:#151518;border:2px solid #fff;box-shadow:0 1px 6px rgba(0,0,0,.35);font:800 12px/1 "Plus Jakarta Sans",sans-serif;font-style:normal;align-items:center;justify-content:center;pointer-events:none}#features .bp-card h4{display:flex;align-items:center;gap:10px}.bp-num{display:inline-flex;flex:none;width:24px;height:24px;border-radius:50%;background:#839CFF;color:#151518;font:800 12px/1 "Plus Jakarta Sans",sans-serif;align-items:center;justify-content:center}}
+
+@media (max-width:880px){.kbp-kb{padding:10px 8px!important;overflow:visible}.kbp-key[data-n],.kbp-ud[data-n]{position:relative;overflow:visible!important}.kbp-key[data-n]::after,.kbp-ud[data-n]::after{content:attr(data-n);position:absolute;top:-11px;right:-6px;width:18px;height:18px;border-radius:50%;background:#839CFF;color:#151518;border:2px solid #fff;box-sizing:content-box;font:800 11px/18px "Plus Jakarta Sans",sans-serif;text-align:center;z-index:2;margin:-2px}.kbp .feature h4{display:flex;align-items:center;gap:10px}.kbp-l,.kbp-r,.kbp-b{margin:0}.kbp{row-gap:14px!important}.kbp-l,.kbp-r{gap:14px!important}.kbp-b{gap:14px!important}}
+
+@media (max-width:860px){.cube-stats{container-type:inline-size}.cube-stats .sq-wrap{width:100%;padding:0 5%;box-sizing:border-box}.cube-stats .sq-wrap .sq-no{font-size:4.5cqw!important;white-space:nowrap}.cube-stats .sq-wrap .sq2{margin-top:2.2cqw!important}.cube-stats .sq-wrap .sq3{margin-top:9cqw!important}.cube-stats .sq-wrap .sq-one{font-size:9cqw!important}}
