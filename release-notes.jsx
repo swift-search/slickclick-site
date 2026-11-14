@@ -183,7 +183,7 @@ function ReleaseBody() {
     <div className="wrap">
       <div className="about-body">
         {RELEASES.map((r, ri) => (
-          <div className="rn-release" key={r.version}>
+          <div className="rn-release" key={r.version} id={"v" + r.version} style={{ scrollMarginTop: 90 }}>
             <div style={{ paddingTop: ri === 0 ? 12 : 0, paddingBottom: 8 }}>
               <span className="rn-version"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M3.5 10.5L10.5 3.5M5 3.5h5.5V9" /></svg>Version {r.version}</span>
               <div className="rn-date">{r.date}</div>
@@ -260,3 +260,4 @@ function ReleaseApp() {
 }
 
 ReactDOM.createRoot(document.getElementById('root')).render(<ReleaseApp/>);
+(() => { let n = 0; const go = () => { const e = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1))); if (e) { window.scrollTo(0, e.getBoundingClientRect().top + scrollY - 90); if (++n < 4) setTimeout(go, 250); } else if (location.hash && n++ < 20) setTimeout(go, 100); }; go(); })();
