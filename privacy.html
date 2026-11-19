@@ -24,12 +24,12 @@
 <main class="wrap">
 <article class="doc">
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: 4 November 2026</p>
+<p class="updated">Last updated: 17 November 2026</p>
 <div class="callout"><p>Most of what Slick Click does happens entirely on your device. Your highlights, saved passages, notes, PDF annotations, settings and search history never leave your computer. The exception is the AI features: when you ask Slick AI to do something, the text you selected is sent to our server and on to an AI provider so it can be answered. This policy explains exactly what is sent, when, and to whom.</p></div>
 <h2>Who we are</h2>
 <p>Slick Click is operated by Sinope, based in the United Kingdom. For the purposes of UK data protection law we are the data controller for the personal data described in this policy. You can contact us at <a href="mailto:support@slickclick.app">support@slickclick.app</a>.</p>
 <h2>What Slick Click does</h2>
-<p>Slick Click is a Chrome extension. Highlight text on any webpage and a floating menu appears, letting you search that text across your chosen websites, highlight it permanently, save it to your Library, or ask Slick AI about it. It also includes a built-in PDF viewer and a keyboard-triggered Slick AI Box.</p>
+<p>Slick Click is a Chrome extension. Highlight text on any webpage and a floating menu appears, letting you search that text across your chosen websites, highlight it permanently, save it to your Library, save a date to your calendar, or ask Slick AI about it. It also includes a built-in PDF viewer and a keyboard-triggered Slick AI Box.</p>
 <h2>Data stored only on your device</h2>
 <p>The following is held in Chrome's local storage on your computer. It is not transmitted to us and we cannot see it:</p>
 <ul>
@@ -40,6 +40,7 @@
 <li>Web highlights: the words and phrases you have highlighted, their colors, scope and any groups</li>
 <li>Saved passages and noted words in your Library, including the text, source URL, timestamp, word count and any notes you add</li>
 <li>PDF annotations: highlights and notes you make in the built-in PDF viewer</li>
+<li>Your preferred calendar option (Google, Outlook or file), if you ask it to remember</li>
 <li>Whether you have seen the onboarding message</li>
 </ul>
 <p>If Chrome Sync is enabled on your Google account, Chrome may sync your settings across your own devices. That process is handled entirely by Google; Slick Click has no involvement in it and no access to the synced data.</p>
@@ -60,11 +61,15 @@
 <li>The text of any text files or PDFs you attached to the question. The file is read on your device and only its extracted text is sent, never the file itself</li>
 <li>The recent conversation, so follow-up questions make sense</li>
 <li>For some features (such as expanding an acronym or Summarize), the page title, the site name and the page headings, to give the AI context. This is sent only when you click that feature</li>
+<li>Find in page by meaning: the sections of the page most likely to answer your question, only when you use that feature</li>
+<li>Slick Guide (where do I click): the names and web addresses of the buttons and links on the page, with your question. Not the page's text</li>
+<li>Slick AI instructions: your Slick AI instructions from Settings, sent with Chat questions</li>
+<li>Reply to an email: the text of the message you are replying to</li>
 <li>The visible text of the page, but only if you switch on the page context button, which is off by default and resets itself when you move to a different page</li>
 </ul>
 <p>We do not store the content of your AI requests after they have been answered. Your questions and the text you send are not used to train any AI model, and are not sold or shared with anyone beyond the provider that answers them.</p>
 <h2>Analytics</h2>
-<p>Slick Click sends anonymous usage events to Google Analytics so we can see which features are used and where things break. The events pass through our own server, which forwards them to Google and does not keep a copy. An event is a short note such as "the menu opened" or "a search was run". Each event can include: counts and lengths (for example how many characters were highlighted, never the text itself), timings (for example how many seconds the menu was open), the feature used, the name of the search site you chose (for example "YouTube" or a site domain picked from your own list), and a random identifier generated on your device that is not linked to your name or email.</p>
+<p>Slick Click sends anonymous usage events to Google Analytics so we can see which features are used and where things break. The events pass through our own server, which forwards them to Google and does not keep a copy. An event is a short note such as "the menu opened" or "a search was run". Each event can include: counts and lengths (for example how many characters were highlighted, never the text itself), timings (for example how many seconds the menu was open), the feature used, the name of the search site you chose (for example "YouTube" or a site domain picked from your own list), which calendar option you picked (Google, Outlook or file), and a random identifier generated on your device that is not linked to your name or email.</p>
 <p>Analytics does not include the address or title of the page you are on, the text you highlight, what you search for, your name, or your email address.</p>
 <p>If something goes wrong inside the extension, an error report containing the first 150 characters of the technical error message and where it came from may also be sent. These are technical messages and are not meant to contain anything you wrote. Analytics events are sent only when you actively use a Slick Click feature, not as you browse.</p>
 <h2>Other services your browser contacts</h2>
@@ -76,10 +81,11 @@
 <tr><td>Google Analytics</td><td>Feature usage events (counts, lengths, timings, search-site names), random device identifier, via our server</td><td>When you use a feature</td></tr>
 <tr><td>Google speech recognition</td><td>Your microphone audio, transcribed by Chrome's built-in speech service</td><td>Only while you hold the microphone button</td></tr>
 <tr><td>Google and DuckDuckGo favicon services</td><td>The domain name of a website in your list</td><td>To show site icons in the menu</td></tr>
-<tr><td>Wiktionary (Wikimedia Foundation)</td><td>The single word you are looking up</td><td>When you use Define. If no entry is found, Slick AI answers instead, via our server</td></tr>
+<tr><td>Wiktionary (Wikimedia Foundation)</td><td>The single word you are looking up</td><td>When you use Define or Pronounce. If no entry is found, Slick AI answers instead, via our server</td></tr>
 <tr><td>Datamuse</td><td>The single word you are looking up</td><td>When you use Define, to find synonyms</td></tr>
 <tr><td>A website you add</td><td>A test search using a made-up word, plus loading that site's home page and its search description file, to work out how it searches</td><td>When you add a new website to your list</td></tr>
 <tr><td>Google search suggestions</td><td>What you type in the search bar</td><td>Only if you enable suggestions in Settings. Off by default</td></tr>
+<tr><td>Google Calendar and Outlook (Microsoft)</td><td>The event you create: title, date and time, location and notes, which can include the page's web address, in the address of a new tab</td><td>Only when you choose "Add to Google Calendar" or "Add to Outlook". Downloading the file sends nothing</td></tr>
 <tr><td>Google Translate</td><td>The highlighted text, in the URL of a new tab</td><td>When you use Translate</td></tr>
 <tr><td>The websites you search</td><td>Your search query, in the URL of a new tab</td><td>When you run a search</td></tr>
 </tbody>

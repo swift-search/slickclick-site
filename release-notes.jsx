@@ -63,6 +63,8 @@ const RELEASES = [
         <p>Highlight a date and an “Add to calendar?” pill appears. A small form fills itself in; pick Google Calendar, Apple or Outlook and you're all set.</p>) },
       { tag: 'new', tagLabel: 'New', title: 'Two choices on the Save button', body: (
         <p>The Save button now has two choices: Save to Library, or Save to calendar.</p>) },
+      { tag: 'new', tagLabel: 'New', title: 'Menu theme added', body: (
+        <p>“Shoal” is a new animated menu available now in the Settings page.</p>) },
       { tag: 'improved', tagLabel: 'Improved', title: '“How long ago?” works with AD years', body: (
         <p>The “How long ago?” suggestive pill now works for years written with AD first, such as AD 597.</p>) },
     ],
