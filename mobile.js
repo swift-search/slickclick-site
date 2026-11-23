@@ -8,7 +8,7 @@ var host=nav.closest('.nav')||nav.parentNode;
 var b=document.createElement('button');b.className='nav-burger';b.setAttribute('aria-label','Menu');b.setAttribute('aria-expanded','false');b.innerHTML='<span></span>';
 var m=document.createElement('div');m.className='nav-menu';
 links.querySelectorAll('a').forEach(function(a){var c=a.cloneNode(true);c.removeAttribute('style');m.appendChild(c)});
-if(cta){var c2=cta.cloneNode(true);m.appendChild(c2)}
+nav.querySelectorAll('.nav-cta').forEach(function(x){m.appendChild(x.cloneNode(true))});
 nav.appendChild(b);host.style.position=host.style.position||'sticky';host.appendChild(m);
 function set(o){host.classList.toggle('nav-open',o);b.setAttribute('aria-expanded',o)}
 b.addEventListener('click',function(){set(!host.classList.contains('nav-open'))});

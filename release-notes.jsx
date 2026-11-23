@@ -34,9 +34,14 @@ function Nav() {
           <a href="privacy.html">Privacy</a>
           <a href="release-notes.html" aria-current="page">Release Notes</a>
         </div>
+        <div className="nav-ctas">
         <a href={MAIN + '#install'} className="nav-cta">
           <ChromeIcon /> Add to Chrome
         </a>
+        <a href="https://addons.mozilla.org/en-US/firefox/addon/slick-click/" target="_blank" rel="noopener" className="nav-cta">
+          <img src="assets/firefox-logo.png" alt="" width="18" height="18" style={{ display: 'block' }} /> Add to Firefox
+        </a>
+        </div>
       </div>
     </nav>
   );
@@ -56,6 +61,21 @@ function ReleaseHero() {
 }
 
 const RELEASES = [
+  {
+    version: '4.6.0', date: 'November 2026',
+    entries: [
+      { tag: 'new', tagLabel: 'New', title: 'Menu theme added', body: (
+        <p>A new theme for the Slick Click menu has arrived in the Settings page.</p>) },
+      { tag: 'new', tagLabel: 'New', title: 'Firefox support', body: (
+        <p>Slick Click now works in Firefox, as well as any Chromium browser.</p>) },
+      { tag: 'new', tagLabel: 'New', title: 'Firefox launcher shortcut', body: (
+        <p>The keyboard shortcut for opening the Slick Click menu on a webpage in Firefox is Alt+C.</p>) },
+      { tag: 'improved', tagLabel: 'Improved', title: 'Settings live preview', body: (
+        <p>In Settings, the live preview moves to sit beside the theme you choose, so you never have to scroll back up to see it.</p>) },
+      { tag: 'fixed', tagLabel: 'Fixed', title: 'Enter searches your first site again', body: (
+        <p>Pressing Enter after you highlight something searches your first site again, as the tips say it should.</p>) },
+    ],
+  },
   {
     version: '4.5.0', date: 'November 2026',
     entries: [
@@ -98,7 +118,7 @@ const RELEASES = [
       { tag: 'improved', tagLabel: 'Improved', title: 'Tidier search suggestions', body: (
         <p>Search suggestions are tidier: five lines at most, arrow keys to move through them, and they step aside when you pause typing so your site icons are never hidden.</p>) },
       { tag: 'improved', tagLabel: 'Improved', title: 'Smoother multi-search', body: (
-        <p>Multi-search is smoother: tabs open in the order you pick, a bit faster, too.</p>) },
+        <p>Multi-search is smoother: tabs open in the order you pick, a bit faster too.</p>) },
       { tag: 'new', tagLabel: 'New', title: 'New banner in Settings', body: (
         <p>A swish new banner at the top of the Settings page now keeps you informed with the latest updates and developments.</p>) },
     ],

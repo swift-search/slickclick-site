@@ -12,11 +12,11 @@
 .nav-menu a{padding:14px 4px;font-size:17px;font-weight:600;color:#C4C2BE;border-bottom:1px solid rgba(244,242,238,.08)}
 .nav-menu a[aria-current="page"]{color:#F4F2EE}
 .nav-menu .soon{opacity:.5;pointer-events:none}
-.nav-menu .nav-cta{margin-top:16px;justify-content:center;border:0;padding:14px 18px;color:#1a1a1d;font-size:16px}
+.nav-menu .nav-cta{margin-top:12px;justify-content:center;border:0;padding:14px 18px;color:#1a1a1d;font-size:16px}
 }
 @media (max-width:640px){
 .wrap{padding-left:20px!important;padding-right:20px!important}
-.nav-inner>.nav-cta{display:none!important}
+.nav-inner>.nav-cta,.nav-inner>.nav-ctas{display:none!important}
 .brand img,.brand-lockup{max-height:30px}
 h1{overflow-wrap:anywhere}
 img,video,iframe,svg{max-width:100%}

@@ -5,7 +5,9 @@ const { useState, useEffect, useRef, useCallback, useLayoutEffect } = React;
 const STORE_URL = 'https://chromewebstore.google.com/detail/swift-search/lididcfmfpaiaeapmjpddgicifbjelja?hl=en-US&utm_source=ext_sidebar';
 
 /* ---------- Icons ---------- */
+const FF_URL = 'https://addons.mozilla.org/en-US/firefox/addon/slick-click/';
 const Icon = {
+  firefox: () => <img src="assets/firefox-logo.png" alt="" width="18" height="18" style={{ display: 'block' }} />,
   chrome: () =>
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
       <path d="M12 12L2.474 6.5A11 11 0 0 1 21.526 6.5Z" fill="#EA4335" />
@@ -161,9 +163,14 @@ function Nav() {
           <a href="privacy.html">Privacy</a>
           <a href="release-notes.html">Release Notes</a>
         </div>
+        <div className="nav-ctas">
         <a href={STORE_URL} target="_blank" rel="noopener" className="nav-cta">
           <Icon.chrome /> Add to Chrome
         </a>
+        <a href={FF_URL} target="_blank" rel="noopener" className="nav-cta">
+          <Icon.firefox /> Add to Firefox
+        </a>
+        </div>
       </div>
     </nav>);
 
@@ -535,7 +542,7 @@ const FEATURE_GROUPS = [
   { icon: 'globe', title: 'Add any website', body: 'If a site has a search box, Slick Click can use it. It works out the search address for you.' },
   { icon: 'book', title: 'Definitions, instantly', body: 'Want to look up a word? Use the Define feature without losing your place on the page.' }] },
 { label: 'Keep what matters', items: [
-  { icon: 'queue', title: 'Queue it up', body: "Reading and spot three things to look up? Add them to a queue as you go, search them when you're done." },
+  { icon: 'queue', title: 'Queue it up', body: "Spot three things to look up while reading? Add them to a queue as you go, search them when you're done." },
   { icon: 'bookmark', title: 'Highlight and keep', body: 'Mark passages that are still there when you come back. Save quotes to your Library with a link straight to the source.' }] },
 { label: 'Under your control', items: [
   { icon: 'pdf', title: 'Works in PDFs too', body: 'The same tools inside a document. Highlight, annotate and save exactly as you would on a webpage.' },
@@ -854,11 +861,11 @@ function Stats({ gate }) {
 { q: 'Is my data used to train AI models?', a: "No, and we don't keep your requests or the answers. They exist in memory for as long as the request takes and are never written to our database. Once a request reaches Google, xAI or Z.ai it's governed by their terms, so treat Slick AI like any other AI tool: don't put anything in it you wouldn't send to a third party." },
 { q: 'What happens when I run out of AI credits?', a: "Your allowance resets at the start of each month. Everything that isn't AI keeps working as normal in the meantime." },
 { q: "Can I add a site that isn't in the list?", a: "Yes. Open Settings, type the site's address (youtube.com is enough) and Slick Click works out how to search it. There's also a list of popular sites you can add with one click." },
-{ q: 'Does it work on Firefox, Safari or Edge?', a: "Not yet. Slick Click is built for Chrome. Other Chromium browsers like Edge and Brave will run it, though Google sign-in, and so the AI features, may not work there. We hope to get Slick Click up and running on Firefox and Safari before the end of the year, so stay tuned for updates." },
+{ q: 'Does it work on Firefox, Safari or Edge?', a: "Slick Click is available for both Firefox and Chrome. Other Chromium browsers like Edge and Brave will run it too. Safari isn't supported yet." },
 { q: 'Does it work in PDFs?', a: 'Yes, Slick Click is 100% compatible with PDFs.' },
-{ q: 'Will it slow my browsing down?', a: "Slick Click is less than 7MiB and has been optimized to work as smoothly as possible on your system." },
+{ q: 'Will it slow my browsing down?', a: "Slick Click is less than 8MiB and has been optimized to work as smoothly as possible on your system." },
 { q: "Something's broken. How do I get help?", a: "Email support@slickclick.app. We aim to respond within a couple of days." },
-{ q: 'How do I uninstall?', a: 'Right-click the icon and choose "Remove from Chrome". That clears everything stored on your machine. If you made an account for the AI features, delete it separately first: Settings, then Membership, then Delete account.' }];
+{ q: 'How do I uninstall?', a: 'Right-click the icon and choose "Remove from Chrome" (or "Remove Extension" in Firefox). That clears everything stored on your machine. If you made an account for the AI features, delete it separately first: Settings, then Membership, then Delete account.' }];
 
 
 function FAQ() {
@@ -897,9 +904,14 @@ function CTA() {
         <div className="cta-banner">
           <h3>The ultimate web browsing tool is here</h3>
           <p>Install Slick Click free. Highlight your first piece of text. You'll never copy-paste into Google again.</p>
+          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', justifyContent: 'center' }}>
           <a href={STORE_URL} target="_blank" rel="noopener" className="btn btn-primary">
             <Icon.chrome /> Get Started
           </a>
+          <a href={FF_URL} target="_blank" rel="noopener" className="btn btn-primary">
+            <Icon.firefox /> Get Started on Firefox
+          </a>
+          </div>
         </div>
       </div>
     </section>);
