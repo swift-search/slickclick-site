@@ -274,7 +274,7 @@ function Footer() {
             <span style={{ fontSize: '9px', textTransform: 'uppercase', letterSpacing: '0.1em', opacity: 0.5, fontWeight: 500 }}>Developed by</span>
             <img src="sinope-lockup-gray.png" alt="Sinope" style={{ height: 46, width: 'auto' }} />
           </span>
-          <span>v.4.3.0. Last updated November 2026</span>
+          <span>v.4.6.0. Last updated November 2026</span>
         </div>
       </div>
     </footer>
