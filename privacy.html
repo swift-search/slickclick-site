@@ -24,7 +24,7 @@
 <main class="wrap">
 <article class="doc">
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: 23 November 2026</p>
+<p class="updated">Last updated: 24 November 2026</p>
 <div class="callout"><p>Most of what Slick Click does happens entirely on your device. Your highlights, saved passages, notes, PDF annotations, settings and search history never leave your computer. The exception is the AI features: when you ask Slick AI to do something, the text you selected is sent to our server and on to an AI provider so it can be answered. This policy explains exactly what is sent, when, and to whom.</p></div>
 <h2>Who we are</h2>
 <p>Slick Click is operated by Sinope, based in the United Kingdom. For the purposes of UK data protection law we are the data controller for the personal data described in this policy. You can contact us at <a href="mailto:support@slickclick.app">support@slickclick.app</a>.</p>
@@ -43,7 +43,7 @@
 <li>Your preferred calendar option (Google, Outlook or file), if you ask it to remember</li>
 <li>Whether you have seen the onboarding message</li>
 </ul>
-<p>If browser sync is enabled (Chrome Sync on your Google account, or Firefox Sync on your Mozilla account), your browser may sync your settings across your own devices. In Firefox, the same can happen through Firefox Sync if you have chosen to sync add-ons. That process is handled entirely by Google or Mozilla; Slick Click has no involvement in it and no access to the synced data.</p>
+<p>If browser sync is enabled (Chrome Sync on your Google account, or Firefox Sync on your Mozilla account), your browser may sync your settings across your own devices. That process is handled entirely by Google or Mozilla; Slick Click has no involvement in it and no access to the synced data.</p>
 <h2>Data sent to our servers</h2>
 <p>Slick Click runs a backend service, hosted on Render in the EU, which handles sign-in and AI requests. This is what reaches it.</p>
 <h3>If you sign in</h3>
@@ -69,7 +69,7 @@
 </ul>
 <p>We do not store the content of your AI requests after they have been answered. Your questions and the text you send are not used to train any AI model, and are not sold or shared with anyone beyond the provider that answers them.</p>
 <h2>Analytics</h2>
-<p>Slick Click sends anonymous usage events to Google Analytics so we can see which features are used and where things break. The events pass through our own server, which forwards them to Google and does not keep a copy. An event is a short note such as "the menu opened" or "a search was run". Each event can include: counts and lengths (for example how many characters were highlighted, never the text itself), timings (for example how many seconds the menu was open), the feature used, the name of the search site you chose (for example "YouTube" or a site domain picked from your own list), which calendar option you picked (Google, Outlook or file), and a random identifier generated on your device that is not linked to your name or email.</p>
+<p>Slick Click sends anonymous usage events to Google Analytics so we can see which features are used and where things break. The events pass through our own server, which forwards them to Google and does not keep a copy. An event is a short note such as "the menu opened" or "a search was run". Each event can include: counts and lengths (for example how many characters were highlighted, never the text itself), timings (for example how many seconds the menu was open), the feature used, the name of the search site you chose (for example "YouTube" or a site domain picked from your own list), which calendar option you picked (Google, Outlook or file), the version of the extension, in Firefox a label saying the browser is Firefox, and a random identifier generated on your device that is not linked to your name or email.</p>
 <p>Analytics does not include the address or title of the page you are on, the text you highlight, what you search for, your name, or your email address.</p>
 <p>In Firefox, usage events and error reports are sent only if you allow “technical and interaction data” for Slick Click. Firefox offers this choice when you install the add-on, and you can change it at any time in Firefox under Add-ons and themes, Slick Click, Permissions and data. While it is off, nothing described in this Analytics section is sent.</p>
 <p>If something goes wrong inside the extension, an error report containing the first 150 characters of the technical error message and where it came from may also be sent. These are technical messages and are not meant to contain anything you wrote. Analytics events are sent only when you actively use a Slick Click feature, not as you browse.</p>
@@ -86,8 +86,8 @@
 <tr><td>Datamuse</td><td>The single word you are looking up</td><td>When you use Define, to find synonyms</td></tr>
 <tr><td>A website you add</td><td>A test search using a made-up word, plus loading that site's home page and its search description file, to work out how it searches</td><td>When you add a new website to your list</td></tr>
 <tr><td>Google search suggestions</td><td>What you type in the search bar</td><td>Only if you enable suggestions in Settings. Off by default</td></tr>
-<tr><td>Google Calendar and Outlook (Microsoft)</td><td>The event you create: title, date and time, location and notes, which can include the page's web address, in the address of a new tab</td><td>Only when you choose "Add to Google Calendar" or "Add to Outlook". Downloading the file sends nothing</td></tr>
 <tr><td>Google Translate</td><td>The highlighted text, in the URL of a new tab</td><td>When you use Translate</td></tr>
+<tr><td>Google Calendar and Outlook (Microsoft)</td><td>The event you create: title, date and time, location and notes, which can include the page's web address, in the address of a new tab</td><td>Only when you choose "Add to Google Calendar" or "Add to Outlook". Downloading the file sends nothing</td></tr>
 <tr><td>The websites you search</td><td>Your search query, in the URL of a new tab</td><td>When you run a search</td></tr>
 </tbody>
 </table></div>
@@ -97,7 +97,7 @@
 <li><strong>storage</strong>: to keep your websites, highlights, saved passages and settings on your device</li>
 <li><strong>tabs</strong>: to open results in a new tab and to know which tab is active when you use a keyboard shortcut</li>
 <li><strong>scripting</strong>: to place the floating menu on the page</li>
-<li><strong>alarms</strong>: to keep the background service worker responsive</li>
+<li><strong>alarms</strong>: to keep the background process responsive</li>
 <li><strong>identity</strong>: to sign you in with Google when you choose to use the AI features</li>
 <li><strong>offscreen</strong> (Chrome only): to run speech recognition for the microphone button</li>
 <li><strong>host permissions (all sites)</strong>: the floating menu has to be able to appear on whatever page you are reading, and there is no way to know in advance which pages those will be. This permission is not used to read or collect pages you visit</li>
